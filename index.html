@@ -1,0 +1,258 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+<div class="container">
+
+<img class="decor" src="https://xatimg.com/image/f5NE6SRrrjA7.png">
+
+<div class="card">
+<h1>AlmaMuerta ♡</h1>
+<p>(1553771047)</p>
+</div>
+
+<audio id="music">
+<source src="https://files.catbox.moe/n7dip4.mp4" type="audio/mp4">
+</audio>
+
+<button class="playbtn" onclick="toggleMusic()">▶</button>
+
+</div>
+
+<div class="hearts">
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+</div>
+
+<div class="sparkles">
+<span>✦</span>
+<span>✧</span>
+<span>★</span>
+<span>✦</span>
+<span>✧</span>
+<span>★</span>
+</div>
+
+body{
+background:#ffd6e7;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:Arial;
+overflow:hidden;
+}
+
+.container{
+position:relative;
+width:750px;
+height:430px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.decor{
+position:absolute;
+width:300px;
+right:5px;
+top:-35px;
+transform:rotate(22deg);
+z-index:0;
+}
+
+.card{
+position:relative;
+z-index:1;
+background:#fff0f6;
+padding:45px;
+border-radius:28px;
+text-align:center;
+color:#9b5d73;
+width:360px;
+border:3px solid #ffc2d1;
+box-shadow:0 8px 20px rgba(255,182,193,0.5);
+}
+
+h1{
+margin:0;
+font-size:48px;
+font-family:'Parisienne',cursive;
+}
+
+p{
+margin-top:10px;
+opacity:0.8;
+font-size:18px;
+font-family:'Parisienne',cursive;
+}
+
+.playbtn{
+position:absolute;
+bottom:15px;
+right:15px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#ffbfd5;
+color:white;
+font-size:22px;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(255,182,193,0.6);
+}
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+pointer-events:none;
+}
+
+.hearts span{
+position:absolute;
+color:#ff6fa3;
+font-size:28px;
+animation:float 7s linear infinite;
+opacity:0.7;
+}
+
+.hearts span:nth-child(1){
+left:8%;
+animation-duration:6s;
+font-size:22px;
+}
+
+.hearts span:nth-child(2){
+left:25%;
+animation-duration:8s;
+font-size:30px;
+}
+
+.hearts span:nth-child(3){
+left:45%;
+animation-duration:7s;
+font-size:20px;
+}
+
+.hearts span:nth-child(4){
+left:65%;
+animation-duration:9s;
+font-size:35px;
+}
+
+.hearts span:nth-child(5){
+left:82%;
+animation-duration:6.5s;
+font-size:24px;
+}
+
+.hearts span:nth-child(6){
+left:92%;
+animation-duration:8.5s;
+font-size:28px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:0.7;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+
+.sparkles{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+pointer-events:none;
+}
+
+.sparkles span{
+position:absolute;
+color:#ffb6d5;
+font-size:22px;
+animation:sparkleFloat 9s linear infinite;
+opacity:0.85;
+text-shadow:0 0 10px rgba(255,182,213,0.6);
+}
+
+.sparkles span:nth-child(1){
+left:12%;
+font-size:18px;
+animation-duration:7s;
+}
+
+.sparkles span:nth-child(2){
+left:30%;
+font-size:25px;
+animation-duration:10s;
+}
+
+.sparkles span:nth-child(3){
+left:50%;
+font-size:20px;
+animation-duration:8s;
+}
+
+.sparkles span:nth-child(4){
+left:68%;
+font-size:28px;
+animation-duration:11s;
+}
+
+.sparkles span:nth-child(5){
+left:84%;
+font-size:19px;
+animation-duration:9s;
+}
+
+.sparkles span:nth-child(6){
+left:95%;
+font-size:24px;
+animation-duration:8s;
+}
+
+@keyframes sparkleFloat{
+0%{
+transform:translateY(100vh) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:0.85;
+}
+100%{
+transform:translateY(-120px) rotate(180deg);
+opacity:0;
+}
+}
+
+function toggleMusic(){
+let music=document.getElementById("music");
+let btn=document.querySelector(".playbtn");
+
+if(music.paused){
+music.play();
+btn.innerHTML="❚❚";
+}else{
+music.pause();
+btn.innerHTML="▶";
+}
+}
