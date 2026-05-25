@@ -1,41 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
-<div class="container">
-
-<img class="decor" src="https://xatimg.com/image/f5NE6SRrrjA7.png">
-
-<div class="card">
-<h1>AlmaMuerta ♡</h1>
-<p>(1553771047)</p>
-</div>
-
-<audio id="music">
-<source src="https://files.catbox.moe/n7dip4.mp4" type="audio/mp4">
-</audio>
-
-<button class="playbtn" onclick="toggleMusic()">▶</button>
-
-</div>
-
-<div class="hearts">
-<span>♡</span>
-<span>♡</span>
-<span>♡</span>
-<span>♡</span>
-<span>♡</span>
-<span>♡</span>
-</div>
-
-<div class="sparkles">
-<span>✦</span>
-<span>✧</span>
-<span>★</span>
-<span>✦</span>
-<span>✧</span>
-<span>★</span>
-</div>
+<style>
 
 body{
 background:#ffd6e7;
@@ -244,6 +217,48 @@ opacity:0;
 }
 }
 
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="decor" src="https://xatimg.com/image/f5NE6SRrrjA7.png">
+
+<div class="card">
+<h1>AlmaMuerta ♡</h1>
+<p>(1553771047)</p>
+</div>
+
+<audio id="music">
+<source src="https://files.catbox.moe/n7dip4.mp4" type="audio/mp4">
+</audio>
+
+<button class="playbtn" onclick="toggleMusic()">▶</button>
+
+</div>
+
+<div class="hearts">
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+<span>♡</span>
+</div>
+
+<div class="sparkles">
+<span>✦</span>
+<span>✧</span>
+<span>★</span>
+<span>✦</span>
+<span>✧</span>
+<span>★</span>
+</div>
+
+<script>
+
 function toggleMusic(){
 let music=document.getElementById("music");
 let btn=document.querySelector(".playbtn");
@@ -256,3 +271,8 @@ music.pause();
 btn.innerHTML="▶";
 }
 }
+
+</script>
+
+</body>
+</html>
